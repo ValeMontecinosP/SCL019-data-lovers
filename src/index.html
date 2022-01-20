@@ -2,14 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémoncitos</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <img src="pokemoncitos-logo.png" alt="logo que dice pokémoncitos con la misma fuente que se utiliza en pokémon">
-      <p>¡Bienvenidos!
+      <span class="flex-item-left"><img src="pokemoncitos-logo.png" alt="logo que dice pokémoncitos con la misma fuente que se utiliza en pokémon"></span>
+      <p class="flex-item-right">¡Bienvenidos!
         En esta página podrán acceder a toda la información de Pokémones 
         de las regiones de Kanto y Johto haciendo click en la imagen</p>
       <div class="navegación" id="filtros">
@@ -25,8 +26,11 @@
       </div>
       
     </header>
-    <main>
-      <section id="contenedorPokemon"></section>
+    <main class="flex-container">
+      <section class="flex-item-left" id="contenedorPokemon">Bulbasaur</section>
+      <section class="flex-item-center"id="contenedorPokemon">Venosaur</section>
+      <section class="flex-item-right"id="contenedorPokemon">Ivysaur</section>
+
     </main>
     <footer>
       <a href="https://pokemongolive.com/es/"> Pokémon Go </a>
