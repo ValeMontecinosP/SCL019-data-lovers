@@ -34,6 +34,7 @@ header {
   .navegacion {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     font-size: 30px;
     
 }
