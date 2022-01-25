@@ -38,7 +38,15 @@ header {
     font-size: 30px;
     
 }
+.filter {
+  display: flex;
+  justify-content: flex-end;
+}
 
+#lista1 {
+  display: flex;
+  justify-content: flex-end;
+}
   .flex-container {
     display: flex;
     flex-direction: row;
