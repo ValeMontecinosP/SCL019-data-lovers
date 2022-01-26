@@ -14,7 +14,9 @@ for (let i = 0; i < 251; ++i) {
     document.getElementById("nombrePk").innerText=nombresPokemon;
     } 
    
-     
+//createElement
+//.appendChild
+//https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
 
 
 
