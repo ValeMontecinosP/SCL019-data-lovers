@@ -59,11 +59,25 @@ header {
   text-align: center;
   width: 100%;
   height: auto;
-  padding: 100px;
+  padding: 50px;
+  justify-content:space-between;
 }
 
 .box {
-  padding: 40px;
+  flex: 25%;
+  max-width: 25%;
+  padding: 30px;
+  background:#C8DFE2;
+  margin:50px;
+    
+}
+
+.num {
+  text-align: justify;
+}
+.image{
+  max-width: 150%;
+  max-height: 150%;
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
