@@ -51,36 +51,24 @@ header {
   padding: 10px;
   
 }
-.flex-container {
+#cardBox {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   font-size: 30px;
   text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 100px;
 }
-  
-.flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
-  margin: 30px;
+
+.box {
+  padding: 40px;
 }
-.flex-item-center {
-  background-color: #dd6b6b;
-  padding: 10px;
-  flex: 50%;
-  margin: 30px;
-}
-  
-.flex-item-right {
-  background-color: dodgerblue;
-  padding: 10px;
-  flex: 50%;
-  margin: 30px;
-}
-  
+
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
-  header, .flex-container, .navegacion {
+  header, #cardBox, .navegacion {
     flex-direction: column;
   }
 }
