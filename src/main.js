@@ -33,6 +33,29 @@ for ( let i = 0; i < pokemon.length; i++) {
     name.innerHTML = pokemon[i].name;
     card.appendChild(name);
 
+    let resistance = document.createElement("p");
+    resistance.setAttribute("class","resistant");
+    resistance.innerHTML = pokemon[i].resistant;
+    card.appendChild(resistance);
+
+    let weakness = document.createElement("p");
+    weakness.setAttribute("class", "weak");
+    weakness.innerHTML = pokemon[i].weaknesses;
+    card.appendChild(weakness);
+
+    let eggs = document.createElement("p");
+    eggs.setAttribute("class","pkmegg");
+    eggs.innerHTML = pokemon[i].egg;
+    card.appendChild(eggs);
+
+
+    //*let sAttack = document.createElement("p");
+    //*sAttack.setAttribute("class", "specialatk");
+    //*sAttack.innerHTML = pokemon[i].special-attack;
+    //*card.appendChild(sAttack); 
+   //* está anidado y por eso no lo toma?
+
+
 }
 
 
