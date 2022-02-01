@@ -5,10 +5,12 @@ import data from './data/pokemon/pokemon.js';
 
 
 
-console.log(data.pokemon[1].name);
+console.log(data.pokemon[1]);
 
 
 let pokemon = data.pokemon;
+
+
 
 let cardbox = document.getElementById("cardBox")
 
@@ -29,27 +31,43 @@ for ( let i = 0; i < pokemon.length; i++) {
     photo.setAttribute("class", "image");
     card.appendChild(photo);
 
-    let name = document.createElement("p");
-    name.innerHTML = pokemon[i].name;
-    card.appendChild(name);
+    let namePkm = document.createElement("p");
+    namePkm.setAttribute("class", "name");
+    namePkm.innerHTML = pokemon[i].name;
+    card.appendChild(namePkm);
+
+    let aboutPkm = document.createElement("p");
+    aboutPkm.setAttribute("class", "about");
+    aboutPkm.innerHTML = pokemon[i].about;
+    card.appendChild(aboutPkm);
+
+    let typePkm = document.createElement("p");
+    typePkm.innerHTML = "Type: " + pokemon[i].type.join(", ");
+    card.appendChild(typePkm);
 
     let resistance = document.createElement("p");
     resistance.setAttribute("class","resistant");
-    resistance.innerHTML = pokemon[i].resistant;
+    resistance.innerHTML = "Resistance: " + pokemon[i].resistant.join(", ");
     card.appendChild(resistance);
 
     let weakness = document.createElement("p");
     weakness.setAttribute("class", "weak");
-    weakness.innerHTML = pokemon[i].weaknesses;
+    weakness.innerHTML = "Weaknesses: " + pokemon[i].weaknesses.join(", ");
     card.appendChild(weakness);
 
     let eggs = document.createElement("p");
     eggs.setAttribute("class","pkmegg");
-    eggs.innerHTML = pokemon[i].egg;
+    eggs.innerHTML = "Eggs: " + pokemon[i].egg;
     card.appendChild(eggs);
 
+    let specialAttack = document.createElement("p");
+    for (let i = 0; i < 3; i++) {
+        let attack = pokemon["special-attack"][i].name + " ";
+        let text = document.createTextNode(`${attack}`);
+        specialAttack.appendChild(text);
+    }
+    card.appendChild(specialAttack);
     
-
 
 
     //*let sAttack = document.createElement("p");
@@ -57,7 +75,7 @@ for ( let i = 0; i < pokemon.length; i++) {
     //*sAttack.innerHTML = pokemon[i].special-attack;
     //*card.appendChild(sAttack); 
    //* está anidado y por eso no lo toma?
-   //* cómo se hace cuándo hay un - entremedio.
+
 
 }
 
