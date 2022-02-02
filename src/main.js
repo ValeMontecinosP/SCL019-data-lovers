@@ -4,13 +4,9 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
-
 console.log(data.pokemon[1]);
 
-
 let pokemon = data.pokemon;
-
-
 
 let cardbox = document.getElementById("cardBox")
 
