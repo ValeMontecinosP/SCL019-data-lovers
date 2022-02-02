@@ -64,7 +64,7 @@ header {
   text-align: center;
   width: 100%;
   height: auto;
-  padding: 50px;
+  padding: 30px;
   justify-content:space-between;
 }
 
@@ -73,7 +73,7 @@ header {
   max-width: 25%;
   padding: 30px;
   background:#C8DFE2;
-  margin:50px;
+  margin:30px;
     
 }
 
@@ -85,7 +85,7 @@ header {
   max-height: 150%;
 }
 
-.resistant {
+.about, .type, .resistant, .weak, .pkmegg {
   text-align: justify;
   font-size: 17px;
 }

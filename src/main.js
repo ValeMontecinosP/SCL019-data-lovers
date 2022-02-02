@@ -42,6 +42,7 @@ for ( let i = 0; i < pokemon.length; i++) {
     card.appendChild(aboutPkm);
 
     let typePkm = document.createElement("p");
+    typePkm.setAttribute("class", "type");
     typePkm.innerHTML = "Type: " + pokemon[i].type.join(", ");
     card.appendChild(typePkm);
 
@@ -60,13 +61,13 @@ for ( let i = 0; i < pokemon.length; i++) {
     eggs.innerHTML = "Eggs: " + pokemon[i].egg;
     card.appendChild(eggs);
 
-    let specialAttack = document.createElement("p");
-    for (let i = 0; i < 3; i++) {
-        let attack = pokemon["special-attack"][i].name + " ";
-        let text = document.createTextNode(`${attack}`);
-        specialAttack.appendChild(text);
-    }
-    card.appendChild(specialAttack);
+   // let specialAttack = document.createElement("p");
+   // for (let i = 0; i < 3; i++) {
+   //     let attack = pokemon["special-attack"][i].name + " ";
+   //     let text = document.createTextNode(`${attack}`);
+   //     specialAttack.appendChild(text);
+   // }
+    //card.appendChild(specialAttack);
     
 
 
