@@ -30,7 +30,6 @@ header {
   padding: 20px;
 }
 
-
 .navegacion {
   display: flex;
   flex-direction: row;
@@ -85,7 +84,7 @@ header {
   max-height: 150%;
 }
 
-.resistant {
+.about, .type, .resistant, .weak, .pkmegg {
   text-align: justify;
   font-size: 17px;
 }
