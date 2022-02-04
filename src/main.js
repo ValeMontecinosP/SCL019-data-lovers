@@ -1,4 +1,4 @@
-import { typeFilter } from './data.js';
+import { filterRegion } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -6,11 +6,11 @@ import data from './data/pokemon/pokemon.js';
 
 console.log(data.pokemon[1]);
 
+const fullPokemon = data.pokemon;
 let pokemon = data.pokemon;
 
 
 const createPokemonTypes = (dataPokemon) => {
-
 
     let cardbox = document.getElementById("cardBox");
 
@@ -88,13 +88,23 @@ pokemon.forEach(pokemonActual => {
 
 //* for ( let i = 0; i < pokemon.length; i++) { *//
 
-const sortType = document.querySelector('#generation');// obtener el selector por medalla
+//const sortType = document.querySelector('#generation');// obtener el selector por medalla
 
-sortType.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
-  const dataOrdenada =  typeFilter(pokemon,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
-  createPokemonTypes(dataOrdenada);
-  pokemon = dataOrdenada
-});
+// sortType.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+// const dataOrdenada =  typeFilter(pokemon,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+//  createPokemonTypes(dataOrdenada); *//
+//  pokemon = dataOrdenada *//
+// });
+
+document.getElementById("generation").addEventListener("change", (event) => {
+    pokemon = filterRegion(event.target.value, fullPokemon);
+    document.getElementById("cardBox").innerHTML = "";
+  
+    pokemon.forEach(pokemonActual => {
+      createPokemonTypes(pokemonActual);
+    });
+  
+  })
 
 
 
