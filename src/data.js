@@ -19,5 +19,10 @@ export const filterRegion = (pokemonActual, pokemon) => {
           return true;
       }
   })
-  return resultRegion;
+  if (resultRegion.length === 0)  {
+    return pokemon;
+  }
+  else {
+    return resultRegion;
+  }
 }
