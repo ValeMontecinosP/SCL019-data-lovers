@@ -36,3 +36,17 @@ export const pokemonTypes = (pokemon) => {
   })
   return typesPkm; 
 }
+
+export const filterType = (pokemonActual, pokemon) => {
+  const resultFilter = pokemon.filter(pokemon => {
+      if (pokemon.type.includes(pokemonActual)) {
+          return true;
+      }
+  })
+  if (resultFilter.length === 0)  {
+    return pokemon;
+  }
+  else {
+    return resultFilter;
+  }
+}

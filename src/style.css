@@ -84,7 +84,7 @@ header {
   max-height: 150%;
 }
 
-.about, .type, .resistant, .weak, .pkmegg {
+.about, .type, .resistant, .weak, .pkmegg, .specialAttk {
   text-align: justify;
   font-size: 17px;
 }

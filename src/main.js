@@ -1,5 +1,5 @@
-import { types } from '@babel/core';
-import { filterRegion, pokemonTypes } from './data.js';
+// import { types } from '@babel/core';
+import { filterRegion, pokemonTypes, filterType } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -92,6 +92,18 @@ document.getElementById("generation").addEventListener("change", (event) => {
     selectType.appendChild(eachType);
      
   })
+
+
+  document.getElementById("typeFilter").addEventListener("change", (event) => {
+    pokemon = filterType(event.target.value, fullPokemon);
+    document.getElementById("cardBox").innerHTML = "";
+  
+    pokemon.forEach(pokemonActual => {
+      createPokemonTypes(pokemonActual);
+    });
+  
+  })
+
 
   
 
