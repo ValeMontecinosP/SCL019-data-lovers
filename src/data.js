@@ -26,3 +26,13 @@ export const filterRegion = (pokemonActual, pokemon) => {
     return resultRegion;
   }
 }
+
+export const pokemonTypes = (pokemon) => {
+  const typesPkm = new Set();
+  pokemon.forEach(pokemonActual => {
+    pokemonActual.type.forEach(types =>{
+      typesPkm.add(types);
+    })
+  })
+  return typesPkm; 
+}

@@ -1,4 +1,5 @@
-import { filterRegion } from './data.js';
+import { types } from '@babel/core';
+import { filterRegion, pokemonTypes } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -61,40 +62,17 @@ const createPokemonTypes = (dataPokemon) => {
     card.appendChild(eggs);
 
 
-    
-
-   // let specialAttack = document.createElement("p");
-   // for (let i = 0; i < 3; i++) {
-   //     let attack = pokemon["special-attack"][i].name + " ";
-   //     let text = document.createTextNode(`${attack}`);
-   //     specialAttack.appendChild(text);
-   // }
-    //card.appendChild(specialAttack);
-    
-
-
-    //*let sAttack = document.createElement("p");
-    //*sAttack.setAttribute("class", "specialatk");
-    //*sAttack.innerHTML = pokemon[i].special-attack;
-    //*card.appendChild(sAttack); 
-   //* está anidado y por eso no lo toma?
+    let specialAttack = document.createElement("p");
+    specialAttack.setAttribute("class","specialAttk");
+    let specAtName = dataPokemon["special-attack"].map(specialAttackArray=>specialAttackArray.name);
+    specialAttack.innerHTML = `Special Attacks: ${specAtName.join(", ")}`
+    card.appendChild(specialAttack);
 
 
 }
 pokemon.forEach(pokemonActual => {
     createPokemonTypes(pokemonActual);
 });
-
-
-//* for ( let i = 0; i < pokemon.length; i++) { *//
-
-//const sortType = document.querySelector('#generation');// obtener el selector por medalla
-
-// sortType.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
-// const dataOrdenada =  typeFilter(pokemon,event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
-//  createPokemonTypes(dataOrdenada); *//
-//  pokemon = dataOrdenada *//
-// });
 
 document.getElementById("generation").addEventListener("change", (event) => {
     pokemon = filterRegion(event.target.value, fullPokemon);
@@ -105,6 +83,19 @@ document.getElementById("generation").addEventListener("change", (event) => {
     });
   
   })
+
+  let selectType = document.getElementById("typeFilter");
+  let pkmTypes = pokemonTypes(pokemon);
+  pkmTypes.forEach(types => {
+    let eachType = document.createElement("option");
+    eachType.text = types;
+    selectType.appendChild(eachType);
+     
+  })
+
+  
+
+
 
 
 
