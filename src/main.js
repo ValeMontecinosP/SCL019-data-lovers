@@ -56,12 +56,6 @@ const createPokemonTypes = (dataPokemon) => {
     weakness.innerHTML = "Weaknesses: " + dataPokemon.weaknesses.join(", ");
     card.appendChild(weakness);
 
-    let eggs = document.createElement("p");
-    eggs.setAttribute("class","pkmegg");
-    eggs.innerHTML = "Eggs: " + dataPokemon.egg;
-    card.appendChild(eggs);
-
-
     let specialAttack = document.createElement("p");
     specialAttack.setAttribute("class","specialAttk");
     let specAtName = dataPokemon["special-attack"].map(specialAttackArray=>specialAttackArray.name);
