@@ -72,7 +72,7 @@ header {
   max-width: 25%;
   padding: 30px;
   background:#C8DFE2;
-  margin:50px;
+  margin:30px;
     
 }
 
@@ -90,9 +90,13 @@ header {
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
+@media screen and (max-width: 600px) {
   header, #cardBox, .navegacion {
     flex-direction: column;
   }
+  .box {
+    flex: 100%;
+    max-width: 100%;
+  } 
 }
 
