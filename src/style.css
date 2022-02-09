@@ -61,7 +61,7 @@ header {
   flex-direction: row;
   font-size: 30px;
   text-align: center;
-  width: 100%;
+  width: fit-content;
   height: auto;
   padding: 50px;
   justify-content:space-between;
@@ -72,13 +72,13 @@ header {
 
 .box {
   flex: 25%;
-  max-width: 25%;
+  width: fit-content;
   padding: 30px;
   background:#C8DFE2;
   margin:30px;
   transition: ease-in .3s transform;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
- border-top: 10px;
+  border-top: 10px;
 }
 
 .box:hover {
