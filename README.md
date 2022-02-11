@@ -1,6 +1,6 @@
 # Data Lovers Pokémoncitos
 
-[Data Lovers](src/index.html)
+[Ir a página Pokémoncitos](https://valemontecinosp.github.io/SCL019-data-lovers/src/index.html)
 
 ## Índice
 
