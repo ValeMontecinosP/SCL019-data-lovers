@@ -1,7 +1,6 @@
-# Data Lovers
+# Data Lovers Pokémoncitos
 
-
-* [Data Lovers] (https://pazvarela.github.io/SCL019-data-lovers/src/index.html)
+[Ir a página Pokémoncitos](https://valemontecinosp.github.io/SCL019-data-lovers/src/index.html)
 
 ## Índice
 
@@ -34,51 +33,51 @@ Nuestro proceso de diseño comenzó con un prototipo de baja fidelidad, que lueg
 ## 3. Historias de usuario
 
 
-### Historia de usuario 1:
+### **Historia de usuario 1:**
 
 Yo como usuario quiero ver la lista de pokemones para visualizar los pokemones de las regiones de Kanto y Johto
  
-Criterios de Aceptación
+**Criterios de Aceptación**
 
-Traer la data de todos los pokemones y especificar (nombre, foto, número pokémon)
+* Traer la data de todos los pokemones y especificar (nombre, foto, número pokémon)
 
-Mostrar el logo con la bienvenida y los filtros.
+* Mostrar el logo con la bienvenida y los filtros
 
-Colores similares a la página web de Pokémon Go
+* Colores similares a la página web de Pokémon Go
 
-### Historia de usuario 2:
+### **Historia de usuario 2:**
 
 Yo como usuario seguidor de pokémon quiero ordenar y visualizar los pokemones por generación para recordar el animé
 
-Criterios de Aceptación
+**Criterios de Aceptación**
 
-Mostrar los datos importantes del pokémon
+* Mostrar los datos importantes del pokémon
 
-Filtrar la data por generación en un select.
+* Filtrar la data por generación en un select.
 
-Comenzar a tener una página web responsiva
+* Comenzar a tener una página web responsiva
 
-### Historia de Usuario 3:
+### **Historia de Usuario 3:**
 
 Yo como usuario seguidor de pokémon quiero ordenar y visualizar los pokemones por tipo para saber qué pokémon me ayudará en un combate al jugar Pokémon Go
 
-Criterios de Aceptación
+**Criterios de Aceptación**
 
-Filtrar por tipo de Pokémon
+* Filtrar por tipo de Pokémon
 
-Tener una página web responsiva
+* Tener una página web responsiva
 
-Que la información se visualice de forma ordenada
+* Que la información se visualice de forma ordenada
 
-### Historia de Usuario 4:
+### **Historia de Usuario 4:**
 
 Yo como usuario de Pókemon me gustaría ver la lista de los pókemones ordenada de manera ascendente y descendente para 
 
-Criterios de Aceptación
+**Criterios de Aceptación**
 
-Tener la función sort
+* Tener la función sort
 
-Al hacer click en el filtro de orden se muestre la opción de mostrar desde el nombre ascendente y descendente.
+* Al hacer click en el filtro de orden se muestre la opción de mostrar desde el nombre ascendente y descendente.
 
 
 

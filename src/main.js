@@ -111,16 +111,16 @@ document.getElementById("generation").addEventListener("change", (event) => {
   })
 
   let selectorSort = document.getElementById("selectorSort")
-  let createSelectorSort = document.createElement('select');
-  selectorSort.appendChild(createSelectorSort);
+  //let createSelectorSort = document.createElement('select');
+  //selectorSort.appendChild(createSelectorSort);
 
   const sortAscendingName = document.createElement("option");
   sortAscendingName.text = "A-Z";
-  createSelectorSort.appendChild(sortAscendingName);
+  selectorSort.appendChild(sortAscendingName);
 
   const sortDescendingName = document.createElement("option");
   sortDescendingName.text = "Z-A";
-  createSelectorSort.appendChild(sortDescendingName);
+  selectorSort.appendChild(sortDescendingName);
 
   document.getElementById("selectorSort").addEventListener("change", (event) => {
     const userOption = event.target.value;

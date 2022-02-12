@@ -65,6 +65,11 @@ export const orderSort = (pokemon, userOption) => {
       if (a.name > b.name) { return -1;}
       return 0;
     })
-  }
-  return pokemon
+  }  else if (userOption.length===0){
+      return pokemon;
+    }
+  
+  return pokemon;
+  
+  
   }
