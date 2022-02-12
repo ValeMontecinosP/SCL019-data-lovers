@@ -1,5 +1,5 @@
 // import { types } from '@babel/core';
-import { filterRegion, pokemonTypes, filterType } from './data.js';
+import { filterRegion, pokemonTypes, filterType, orderSort } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -88,8 +88,10 @@ document.getElementById("generation").addEventListener("change", (event) => {
   })
 
 
-  document.getElementById("typeFilter").addEventListener("change", (event) => {
-    pokemon = filterType(event.target.value, fullPokemon);
+  document.getElementById("typeFilter").addEventListener("change", function(event) {
+    let tipoSeleccionado = event.target.value;
+    pokemon = filterType(tipoSeleccionado, fullPokemon);
+    console.log(event.target.value)
     document.getElementById("cardBox").innerHTML = "";
   
     pokemon.forEach(pokemonActual => {
@@ -97,6 +99,39 @@ document.getElementById("generation").addEventListener("change", (event) => {
     });
   
   })
+  
+  document.getElementById("generation").addEventListener("change", (event) => {
+    pokemon = filterRegion(event.target.value, fullPokemon);
+    document.getElementById("cardBox").innerHTML = "";
+  
+    pokemon.forEach(pokemonActual => {
+      createPokemonTypes(pokemonActual);
+    });
+  
+  })
+
+  let selectorSort = document.getElementById("selectorSort")
+  let createSelectorSort = document.createElement('select');
+  selectorSort.appendChild(createSelectorSort);
+
+  const sortAscendingName = document.createElement("option");
+  sortAscendingName.text = "A-Z";
+  createSelectorSort.appendChild(sortAscendingName);
+
+  const sortDescendingName = document.createElement("option");
+  sortDescendingName.text = "Z-A";
+  createSelectorSort.appendChild(sortDescendingName);
+
+  document.getElementById("selectorSort").addEventListener("change", (event) => {
+    const userOption = event.target.value;
+    pokemon = orderSort(pokemon, userOption);
+    document.getElementById("cardBox").innerHTML = "";
+    pokemon.forEach(pokemonActual => {
+      createPokemonTypes(pokemonActual);
+    });
+  })
+
+
 
 
   
