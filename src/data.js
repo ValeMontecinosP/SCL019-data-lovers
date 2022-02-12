@@ -25,7 +25,7 @@ export const filterRegion = (pokemonActual, pokemon) => {
   else {
     return resultRegion;
   }
-}
+};
 
 export const pokemonTypes = (pokemon) => {
   const typesPkm = new Set();
@@ -35,7 +35,7 @@ export const pokemonTypes = (pokemon) => {
     })
   })
   return typesPkm; 
-}
+};
 
 export const filterType = (pokemonActual, pokemon) => {
   const resultFilter = pokemon.filter(pokemon => {
@@ -49,4 +49,22 @@ export const filterType = (pokemonActual, pokemon) => {
   else {
     return resultFilter;
   }
-}
+};
+
+export const orderSort = (pokemon, userOption) => {
+  if (userOption == "A-Z") {
+    pokemon.sort(function(a, b){
+      if (a.name < b.name) { return -1;}
+      if (a.name > b.name) { return 1; }
+      return 0;
+    })
+
+  } else if (userOption == "Z-A") {
+    pokemon.sort(function(a, b){
+      if (a.name < b.name) { return 1;}
+      if (a.name > b.name) { return -1;}
+      return 0;
+    })
+  }
+  return pokemon
+  }
