@@ -71,7 +71,7 @@ Yo como usuario seguidor de pokémon quiero ordenar y visualizar los pokemones p
 
 ### **Historia de Usuario 4:**
 
-Yo como usuario de Pókemon me gustaría ver la lista de los pókemones ordenada de manera ascendente y descendente para 
+Yo como usuario de Pókemon me gustaría ver la lista de los pókemones ordenada de manera ascendente y descendente para recordar los nombres de pokemones que empiezan con la letra Z o la letra A
 
 **Criterios de Aceptación**
 
