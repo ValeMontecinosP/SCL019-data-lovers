@@ -28,7 +28,7 @@ export const filterRegion = (pokemonActual, pokemon) => {
 };
 
 export const pokemonTypes = (pokemon) => {
-  const typesPkm = new Set();
+  const typesPkm = new Set(); // eslint-disable-line
   pokemon.forEach(pokemonActual => {
     pokemonActual.type.forEach(types =>{
       typesPkm.add(types);

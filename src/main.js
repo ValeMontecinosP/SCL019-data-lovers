@@ -5,7 +5,7 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
-console.log(data.pokemon[1]);
+//console.log(data.pokemon[1]);
 
 const fullPokemon = data.pokemon;
 let pokemon = data.pokemon;
@@ -91,7 +91,7 @@ document.getElementById("generation").addEventListener("change", (event) => {
   document.getElementById("typeFilter").addEventListener("change", function(event) {
     let tipoSeleccionado = event.target.value;
     pokemon = filterType(tipoSeleccionado, fullPokemon);
-    console.log(event.target.value)
+    //console.log(event.target.value)
     document.getElementById("cardBox").innerHTML = "";
   
     pokemon.forEach(pokemonActual => {
