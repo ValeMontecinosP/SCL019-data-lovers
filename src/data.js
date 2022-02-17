@@ -13,9 +13,9 @@ export const anotherExample = () => {
 //  return filterTypeArr;
 //};
 
-export const filterRegion = (pokemonActual, pokemon) => {
-  const resultRegion = pokemon.filter(pokemon => {
-      if (pokemon.generation.name.includes(pokemonActual)) {
+/*export const filterRegion = (regionSeleccionada, fullPokemon) => {
+  const resultRegion = fullPokemon.filter(pokemon => {
+      if (pokemon.generation.name.includes(regionSeleccionada)) {
           return true;
       }
   })
@@ -25,10 +25,10 @@ export const filterRegion = (pokemonActual, pokemon) => {
   else {
     return resultRegion;
   }
-};
+}; */
 
 export const pokemonTypes = (pokemon) => {
-  const typesPkm = new Set(); // eslint-disable-line
+  const typesPkm = new Set();
   pokemon.forEach(pokemonActual => {
     pokemonActual.type.forEach(types =>{
       typesPkm.add(types);
@@ -37,19 +37,27 @@ export const pokemonTypes = (pokemon) => {
   return typesPkm; 
 };
 
-export const filterType = (pokemonActual, pokemon) => {
-  const resultFilter = pokemon.filter(pokemon => {
-      if (pokemon.type.includes(pokemonActual)) {
+/*export const filterType = (tipoSeleccionado, fullPokemon) => {
+  const resultFilter = fullPokemon.filter(pokemon => {
+      if (pokemon.type.includes(tipoSeleccionado)) {
           return true;
       }
   })
   if (resultFilter.length === 0)  {
-    return pokemon;
+    return fullPokemon;
   }
   else {
     return resultFilter;
   }
-};
+};*/
+
+export const filterPokemon = (data, tipo, region, name) => {
+  const tipoPokemon = data.filter(pokemon => tipo === 'all' ? true : pokemon.type == tipo)
+.filter(pokemon => region === 'all' ? true : pokemon.generation.name == region)
+.sort((a, b) => name === 'all' ? true : name === 'A-Z' ? a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1 : a.name.toUpperCase() > b.name.toUpperCase() ?  -1 : 1)
+
+ return tipoPokemon
+}
 
 export const orderSort = (pokemon, userOption) => {
   if (userOption == "A-Z") {
@@ -73,3 +81,6 @@ export const orderSort = (pokemon, userOption) => {
   
   
   }
+
+
+  

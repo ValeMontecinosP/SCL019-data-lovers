@@ -1,5 +1,5 @@
 // import { types } from '@babel/core';
-import { filterRegion, pokemonTypes, filterType, orderSort } from './data.js';
+import { pokemonTypes, filterPokemon } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -68,8 +68,16 @@ pokemon.forEach(pokemonActual => {
     createPokemonTypes(pokemonActual);
 });
 
-document.getElementById("generation").addEventListener("change", (event) => {
-    pokemon = filterRegion(event.target.value, fullPokemon);
+let selectType = document.getElementById("typeFilter");
+let selectRegion = document.getElementById("generation");
+let selectorSort = document.getElementById("selectorSort")
+
+selectRegion.addEventListener("change", (event) => {
+  let regionSeleccionada = event.target.value;
+  let tipo = selectType.value;
+  let name = selectorSort.value
+  pokemon = filterPokemon(fullPokemon, tipo, regionSeleccionada, name);
+  console.log(pokemon)
     document.getElementById("cardBox").innerHTML = "";
   
     pokemon.forEach(pokemonActual => {
@@ -78,7 +86,7 @@ document.getElementById("generation").addEventListener("change", (event) => {
   
   })
 
-  let selectType = document.getElementById("typeFilter");
+ 
   let pkmTypes = pokemonTypes(pokemon);
   pkmTypes.forEach(types => {
     let eachType = document.createElement("option");
@@ -88,9 +96,12 @@ document.getElementById("generation").addEventListener("change", (event) => {
   })
 
 
-  document.getElementById("typeFilter").addEventListener("change", function(event) {
-    let tipoSeleccionado = event.target.value;
-    pokemon = filterType(tipoSeleccionado, fullPokemon);
+  selectType.addEventListener("change", function(event) {
+    let tipo = event.target.value;
+    let region = selectRegion.value;
+    let name = selectorSort.value;
+    pokemon = filterPokemon(fullPokemon, tipo, region, name);
+    console.log(pokemon)
     //console.log(event.target.value)
     document.getElementById("cardBox").innerHTML = "";
   
@@ -100,17 +111,8 @@ document.getElementById("generation").addEventListener("change", (event) => {
   
   })
   
-  document.getElementById("generation").addEventListener("change", (event) => {
-    pokemon = filterRegion(event.target.value, fullPokemon);
-    document.getElementById("cardBox").innerHTML = "";
-  
-    pokemon.forEach(pokemonActual => {
-      createPokemonTypes(pokemonActual);
-    });
-  
-  })
 
-  let selectorSort = document.getElementById("selectorSort")
+  
   //let createSelectorSort = document.createElement('select');
   //selectorSort.appendChild(createSelectorSort);
 
@@ -122,9 +124,11 @@ document.getElementById("generation").addEventListener("change", (event) => {
   sortDescendingName.text = "Z-A";
   selectorSort.appendChild(sortDescendingName);
 
-  document.getElementById("selectorSort").addEventListener("change", (event) => {
-    const userOption = event.target.value;
-    pokemon = orderSort(pokemon, userOption);
+  selectorSort.addEventListener("change", (event) => {
+    let name = event.target.value;
+    let tipo = selectType.value;
+    let region = selectRegion.value;
+    pokemon = filterPokemon(fullPokemon, tipo, region, name);
     document.getElementById("cardBox").innerHTML = "";
     pokemon.forEach(pokemonActual => {
       createPokemonTypes(pokemonActual);
