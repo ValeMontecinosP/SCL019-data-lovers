@@ -59,7 +59,7 @@ export const filterPokemon = (data, tipo, region, name) => {
  return tipoPokemon
 }
 
-export const orderSort = (pokemon, userOption) => {
+/*export const orderSort = (pokemon, userOption) => {
   if (userOption == "A-Z") {
     pokemon.sort(function(a, b){
       if (a.name < b.name) { return -1;}
@@ -80,7 +80,7 @@ export const orderSort = (pokemon, userOption) => {
   return pokemon;
   
   
-  }
+  }*/
 
 
   
